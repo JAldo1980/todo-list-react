@@ -72,3 +72,24 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* end of reset */
+
+.container {
+  margin: 0 auto;
+  width: 500px;
+  max-width: 100%;
+  border: thin solid blue;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.toggle-box-el {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}

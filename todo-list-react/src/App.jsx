@@ -1,33 +1,23 @@
 import React, { useState, useTransition } from "react";
+import Container from "./Container";
+import Header from "./Header";
+import Toggle from "./Toggle";
 import "./App.css";
-
-import DarkLightToggle from "./DarkLightToggle";
-import Main from "./Main";
+import "./index.css";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
 
-  const toggleTheme = () => {
-    setIsDark((prevState) => !prevState);
-    if (isDark) {
-      document.body.classList.remove("dark");
-    } else {
-      document.body.classList.add("dark");
-    }
+  const handleToggle = () => {
+    setIsToggled((prevState) => !prevState);
   };
 
   return (
     <>
-      <div className={`app ${isDark ? "dark" : "light"}`}>
-        <div className="body">
-          <header>
-            <h1>Todo List</h1>
-            <p>(Built with REACT.js)</p>
-          </header>
-          <DarkLightToggle isDark={isDark} toggleTheme={toggleTheme} />
-          <Main />
-        </div>
-      </div>
+      <Container>
+        <Header />
+        <Toggle isToggled={isToggled} handleToggle={handleToggle} />
+      </Container>
     </>
   );
 }
