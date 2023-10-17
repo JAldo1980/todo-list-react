@@ -71,7 +71,7 @@ function Main() {
           </button>
         </div>
       </div>
-      <section id="output">
+      <section className="output-el" id="output">
         {newObjectArr.map((item) => (
           <div key={item.id} className="item-el">
             <div className="item-left-col">
