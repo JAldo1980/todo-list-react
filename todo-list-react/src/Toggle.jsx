@@ -4,7 +4,7 @@ function Toggle({ isToggled, handleToggle }) {
   return (
     <>
       <div className="toggle-box-el">
-        <div className="toggle-el" onClick={handleToggle}>
+        <div className="toggle" onClick={handleToggle}>
           {isToggled ? "☀️" : "🌙"}
         </div>
       </div>

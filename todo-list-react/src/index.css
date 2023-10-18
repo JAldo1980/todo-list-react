@@ -93,3 +93,39 @@ header {
   display: flex;
   justify-content: center;
 }
+
+.todo-box-el {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.todo-el {
+  display: flex;
+  gap: 1em;
+}
+
+/* Main */
+
+.btn {
+  margin-top: 1em;
+}
+
+.btn-el,
+.input-box-el {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.add-btn-el,
+.filter-btn-el {
+  width: 100%;
+}
+
+/* dark / light mode */
+
+.dark body {
+  background-color: black;
+  color: white;
+}
