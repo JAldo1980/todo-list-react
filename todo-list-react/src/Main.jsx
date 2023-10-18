@@ -2,25 +2,30 @@ import React, { useState } from "react";
 import Todo from "./Todo";
 
 function Main() {
+  // manage state
+
   const [newObjectArr, setNewObjectArr] = useState([]);
   const [inputText, setInputText] = useState("");
 
+  // create ID
   const getRandomId = () => {
-    const randomChar = "1234567890JPDMPA!@£$%&?*+";
-    let newId = "";
+    const randomChar = "1234567890!@£$%^&*?JPDMRSA";
+    let newId;
     for (let i = 0; i < 6; i++) {
-      const randomIndex = Math.floor(Math.random() * randomChar.length);
-      newId += randomChar[randomIndex];
+      let randomNumber = Math.floor(Math.random() * randomChar.length);
+      newId += randomChar[randomNumber];
     }
     return newId;
   };
 
+  // create object
   const createObject = () => {
     const newId = getRandomId();
     const newObject = { item: inputText, id: newId, star: false };
     setNewObjectArr([...newObjectArr, newObject]);
-    setInputText(""); // Clear the input field
+    setInputText("");
   };
+  // render html + map the array
 
   return (
     <>
