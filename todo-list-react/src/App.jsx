@@ -1,9 +1,10 @@
 import React, { useState, useTransition } from "react";
 import Container from "./Container";
 import Header from "./Header";
-import Toggle from "./Toggle";
 import Main from "./Main";
 import Todo from "./Todo";
+import Toggle from "./Toggle";
+
 import "./App.css";
 import "./index.css";
 

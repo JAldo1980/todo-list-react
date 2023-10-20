@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import Todo from "./Todo";
 
 function Main() {
-  // manage state
-
+  // create state
   const [newObjectArr, setNewObjectArr] = useState([]);
   const [inputText, setInputText] = useState("");
 
-  // create ID
-  const getRandomId = () => {
+  // create random ID
+  function getRandomId() {
     const randomChar = "1234567890!@£$%^&*?JPDMRSA";
-    let newId;
+    let newId = "";
     for (let i = 0; i < 6; i++) {
       let randomNumber = Math.floor(Math.random() * randomChar.length);
       newId += randomChar[randomNumber];
     }
     return newId;
-  };
+  }
 
   // create object
   const createObject = () => {
@@ -25,7 +24,8 @@ function Main() {
     setNewObjectArr([...newObjectArr, newObject]);
     setInputText("");
   };
-  // render html + map the array
+
+  // render buttons / inputs / outputs
 
   return (
     <>
@@ -50,9 +50,9 @@ function Main() {
           </button>
         </div>
       </div>
-      {newObjectArr.map((item) => (
-        <Todo key={item.id} item={item} />
-      ))}
+      {newObjectArr.map((item) => {
+        <Todo ket={item} item={item} />;
+      })}
     </>
   );
 }
