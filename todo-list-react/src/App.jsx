@@ -12,6 +12,7 @@ function App() {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
+    document.querySelector("body").classList.toggle("dark");
     setIsToggled((prevState) => !prevState);
   };
 

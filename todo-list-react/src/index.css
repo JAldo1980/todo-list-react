@@ -125,7 +125,7 @@ header {
 
 /* dark / light mode */
 
-.dark body {
+.dark {
   background-color: black;
   color: white;
 }

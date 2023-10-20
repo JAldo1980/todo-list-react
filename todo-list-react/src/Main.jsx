@@ -51,7 +51,7 @@ function Main() {
         </div>
       </div>
       {newObjectArr.map((item) => {
-        <Todo ket={item} item={item} />;
+        <Todo key={item} item={item} />;
       })}
     </>
   );
