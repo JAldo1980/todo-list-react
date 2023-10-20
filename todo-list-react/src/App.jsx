@@ -1,10 +1,10 @@
 import React, { useState, useTransition } from "react";
-import Container from "./Container";
 import Header from "./Header";
+import Container from "./Container";
+import Toggle from "./Toggle";
 import Main from "./Main";
 import Todo from "./Todo";
-import Toggle from "./Toggle";
-
+import "./index.css";
 import "./App.css";
 import "./index.css";
 
@@ -12,8 +12,8 @@ function App() {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
-    document.querySelector("body").classList.toggle("dark");
     setIsToggled((prevState) => !prevState);
+    document.querySelector("body").classList.toggle("dark");
   };
 
   return (
